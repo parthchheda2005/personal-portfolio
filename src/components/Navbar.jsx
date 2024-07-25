@@ -9,7 +9,7 @@ function Navbar({ textGradientColor }) {
   };
 
   return (
-    <div className="bg-black h-[100px] text-gray-100 w-screen flex justify-between items-center">
+    <div className="bg-black h-[100px] text-gray-100 w-screen flex justify-between items-center fixed top-0 z-10">
       <h1 className={`text-2xl font-bold md:ml-12 ml-4 ${textGradientColor}`}>
         Parth Chheda
       </h1>
@@ -21,7 +21,7 @@ function Navbar({ textGradientColor }) {
           <a href="#projects">Projects</a>
         </li>
         <li className="p-5">
-          <a href="#contact">Contact</a>
+          <a href="#contact">Contact Me</a>
         </li>
       </ul>
       <div onClick={handleNav} className="block md:hidden mr-6">
@@ -30,7 +30,7 @@ function Navbar({ textGradientColor }) {
       <div
         className={
           nav
-            ? `fixed h-full left-0 top-0 w-[60%] bg-neutral-900 ease-in-out duration-500 z-10`
+            ? `fixed h-full left-0 top-0 w-[60%] bg-neutral-900 ease-in-out duration-500`
             : `fixed left-[-100%]`
         }
       >

@@ -49,8 +49,10 @@ function Projects({ textGradientColor }) {
           <div className="transform transition-all duration-300 hover:scale-105 overflow-hidden shadow-lg shadow-neutral-900 group container rounded-md flex justify-center items-center max-h-[400px] bg-cover relative">
             <img src={el.img} alt="movie webapp" />
             <div className="opacity-0 group-hover:opacity-90 bg-neutral-600 absolute inset-0 flex flex-col justify-center items-center">
-              <h1 className="text-2xl font-extrabold">{el.title}</h1>
-              <h1 className="text-xl font-extralight">{el.stack}</h1>
+              <h1 className="lg:text-2xl font-extrabold text-xl mt-2 lg:mt-0">
+                {el.title}
+              </h1>
+              <h1 className="lg:text-xl font-extralight text-sm">{el.stack}</h1>
               <div className="flex flex-row justify-center items-center">
                 <div className="pt-8 text-center">
                   <button

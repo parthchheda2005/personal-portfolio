@@ -16,7 +16,7 @@ function Projects({ textGradientColor }) {
     {
       img: movieWebapp,
       repo: "https://github.com/parthchheda2005/movie-webapp-frontend",
-      live: "https://github.com/parthchheda2005/movie-webapp-frontend",
+      live: "https://movie-database-puce.vercel.app/",
       title: "Movie Webapp",
       stack: "React, MongoDB, Node.js, Express.js, CSS",
     },

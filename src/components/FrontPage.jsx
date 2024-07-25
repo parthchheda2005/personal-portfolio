@@ -1,4 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
+import pdf from "../assets/Parth_Chheda_Resume.pdf";
 
 function FrontPage({ textGradientColor }) {
   return (
@@ -27,8 +28,9 @@ function FrontPage({ textGradientColor }) {
         </p>
         <div className="my-8">
           <a
-            href="/"
+            href={pdf}
             className="px-6 py-3 w-full rounded border border-gray-100 hover:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mr-4"
+            target="_blank"
           >
             Download CV
           </a>

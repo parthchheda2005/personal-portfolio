@@ -9,7 +9,7 @@ function Navbar({ textGradientColor }) {
   };
 
   return (
-    <div className="bg-black h-[100px] text-gray-100 w-screen flex justify-between items-center fixed top-0 z-10">
+    <div className="bg-black h-[8vh] text-gray-100 w-screen flex justify-between items-center fixed top-0 z-10 border-b-2 border-white">
       <h1 className={`text-2xl font-bold md:ml-12 ml-4 ${textGradientColor}`}>
         Parth Chheda
       </h1>

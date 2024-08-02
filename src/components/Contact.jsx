@@ -15,9 +15,9 @@ function Contact({ textGradientColor }) {
         </h1>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center">
+      <div className="flex flex-wrap justify-center items-center transition-all duration-200">
         <button
-          className="py-3 px-4 hover:scale-110"
+          className="py-3 px-4 hover:scale-110 transition-all duration-300"
           onClick={() =>
             window
               .open(
@@ -30,7 +30,7 @@ function Contact({ textGradientColor }) {
           <FaLinkedin color="white" size={80} />
         </button>
         <button
-          className="hover:scale-110 py-3 px-4"
+          className="hover:scale-110 py-3 px-4 transition-all duration-300"
           onClick={() =>
             window.open("https://github.com/parthchheda2005", "_blank").focus()
           }
@@ -38,7 +38,7 @@ function Contact({ textGradientColor }) {
           <FaGithubSquare color="white" size={80} />
         </button>
         <button
-          className="py-3 px-4 hover:scale-110"
+          className="py-3 px-4 hover:scale-110 transition-all duration-300"
           onClick={() =>
             window.open("mailto:parth.h.chheda@gmail.com", "_blank").focus()
           }

@@ -2,7 +2,7 @@ function AboutMe({ textGradientColor }) {
   return (
     <div
       id="about"
-      className="text-white max-width-[1200px] mx-auto my-12 sm:py-16 flex flex-col justify-center items-center"
+      className="on-load text-white max-width-[1200px] mx-auto my-12 sm:py-16 flex flex-col justify-center items-center"
     >
       <div className="mx-6 text-center">
         <h1

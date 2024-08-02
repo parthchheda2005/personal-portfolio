@@ -3,7 +3,10 @@ import { MdEmail } from "react-icons/md";
 
 function Contact({ textGradientColor }) {
   return (
-    <div className="max-w-[1200px] mx-auto bg-black sm:py-20 p-5" id="contact">
+    <div
+      className="on-load max-w-[1200px] mx-auto bg-black sm:py-20 p-5"
+      id="contact"
+    >
       <div className="text-center">
         <h1
           className={`${textGradientColor} text-4xl font-extrabold sm:text-6xl mb-6`}

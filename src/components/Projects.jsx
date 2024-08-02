@@ -44,7 +44,7 @@ function Projects({ textGradientColor }) {
         </h1>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4 mx-7 items-center">
+      <div className="on-load grid sm:grid-cols-2 gap-4 mx-7 items-center">
         {images.map((el) => (
           <div className="transform transition-all duration-300 hover:scale-105 overflow-hidden shadow-lg shadow-neutral-900 group container rounded-md flex justify-center items-center max-h-[400px] bg-cover relative">
             <img src={el.img} alt="movie webapp" />

@@ -5,3 +5,32 @@
 body {
   background-color: black;
 }
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(115%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease-in-out forwards;
+}
+
+.on-load {
+  animation: fade-in 2s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}

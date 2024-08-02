@@ -4,7 +4,7 @@ import pdf from "../assets/Parth_Chheda_Resume.pdf";
 function FrontPage({ textGradientColor }) {
   return (
     <div className="flex justify-center items-center sm:grid-cols-3 mx-auto bg-black text-white h-[70vh] py-8">
-      <div className="px-5 my-auto text-center">
+      <div className="zoom-in px-5 my-auto text-center">
         <h1 className="text-white text-6xl lg:text-8xl font-extrabold">
           <span className={textGradientColor}>I'm a </span>
           <br />

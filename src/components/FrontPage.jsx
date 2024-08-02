@@ -29,14 +29,14 @@ function FrontPage({ textGradientColor }) {
         <div className="my-8">
           <a
             href={pdf}
-            className="px-6 py-3 w-full rounded border border-gray-100 hover:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mr-4"
+            className="px-6 py-3 w-full rounded border border-gray-100 hover:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mr-4 text-sm sm:text-lg"
             target="_blank"
           >
             Download CV
           </a>
           <a
             href="#contact"
-            className="mr-4 px-6 py-3 w-full rounded border border-gray-100 hover:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400"
+            className="mr-4 px-6 py-3 w-full rounded border border-gray-100 hover:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-sm sm:text-lg"
           >
             Contact Me
           </a>

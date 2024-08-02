@@ -31,7 +31,7 @@ function Navbar({ textGradientColor }) {
         className={
           nav
             ? `fixed h-full left-0 top-0 w-[60%] bg-neutral-900 ease-in-out duration-500`
-            : `fixed left-[-100%]`
+            : `fixed left-[-100%] ease-in-out duration-500 h-full top-0 bg-neutral-900`
         }
       >
         <h1 className={`text-3xl font-bold m-4 ${textGradientColor}`}>

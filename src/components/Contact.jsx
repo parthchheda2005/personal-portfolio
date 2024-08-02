@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 function Contact({ textGradientColor }) {
   return (
     <div
-      className="on-load max-w-[1200px] mx-auto bg-black sm:py-20 p-5"
+      className="on-load max-w-[1200px] mx-auto bg-black sm:py-20 p-5 mt-7"
       id="contact"
     >
       <div className="text-center">

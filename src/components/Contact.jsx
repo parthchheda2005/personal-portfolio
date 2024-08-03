@@ -1,9 +1,10 @@
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-function Contact({ textGradientColor }) {
+function Contact({ textGradientColor, ref }) {
   return (
     <div
+      ref={ref}
       className="on-load max-w-[1200px] mx-auto bg-black sm:py-20 p-5 mt-7"
       id="contact"
     >

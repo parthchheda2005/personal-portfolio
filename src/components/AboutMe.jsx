@@ -1,6 +1,7 @@
-function AboutMe({ textGradientColor }) {
+function AboutMe({ textGradientColor, ref }) {
   return (
     <div
+      ref={ref}
       id="about"
       className="on-load text-white max-width-[1200px] mx-auto my-12 sm:py-16 flex flex-col justify-center items-center"
     >

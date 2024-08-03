@@ -15,13 +15,40 @@ function Navbar({ textGradientColor }) {
       </h1>
       <ul className="hidden md:flex mr-10">
         <li className="p-5">
-          <a href="#about">About</a>
+          <button
+            onClick={() => {
+              const element = document.getElementById("about");
+              element.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            About
+          </button>
         </li>
         <li className="p-5">
-          <a href="#projects">Projects</a>
+          <button
+            onClick={() => {
+              const element = document.getElementById("projects");
+              element.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Projects
+          </button>
         </li>
         <li className="p-5">
-          <a href="#contact">Contact Me</a>
+          <button
+            onClick={() => {
+              const element = document.getElementById("contact");
+              element.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Contact Me
+          </button>
         </li>
       </ul>
       <div onClick={handleNav} className="block md:hidden mr-6">

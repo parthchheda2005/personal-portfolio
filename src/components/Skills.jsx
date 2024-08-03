@@ -7,7 +7,7 @@ import react from "../assets/react.png";
 import nodejs from "../assets/nodejs.png";
 import tailwind from "../assets/tailwind.png";
 
-function Skills() {
+function Skills({}) {
   return (
     <div className="on-load bg-black text-gray-400 max-w-[1200px] md:h-[150px] mx-auto grid grid-cols-3 md:flex md:justify-center md:items-center place-items-center">
       <h2 className="text-gray-700 text-2xl md:text-4xl font-bold m-4">

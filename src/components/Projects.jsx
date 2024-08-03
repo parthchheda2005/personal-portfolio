@@ -36,7 +36,7 @@ function Projects({ textGradientColor }) {
 
   return (
     <div id="projects" className="text-white max-width-[1200px] mx-auto">
-      <div className="mx-6 text-center">
+      <div className="mx-6 my-3 text-center">
         <h1
           className={`${textGradientColor} text-4xl font-extrabold sm:text-6xl mb-6`}
         >

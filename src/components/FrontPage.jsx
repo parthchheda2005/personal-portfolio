@@ -1,10 +1,10 @@
 import { TypeAnimation } from "react-type-animation";
 import pdf from "../assets/Parth_Chheda_Resume.pdf";
 
-function FrontPage({ textGradientColor, ref }) {
+function FrontPage({ textGradientColor }) {
   return (
     <div
-      ref={ref}
+      id="frontPage"
       className="flex justify-center items-center sm:grid-cols-3 mx-auto bg-black text-white h-[70vh] py-8"
     >
       <div className="zoom-in px-5 my-auto text-center">

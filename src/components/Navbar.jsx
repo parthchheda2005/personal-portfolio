@@ -10,7 +10,15 @@ function Navbar({ textGradientColor }) {
 
   return (
     <div className="bg-black h-[8vh] text-gray-100 w-screen flex justify-between items-center fixed top-0 z-10 border-b-2 border-white">
-      <h1 className={`text-2xl font-bold md:ml-12 ml-4 ${textGradientColor}`}>
+      <h1
+        className={`text-2xl font-bold md:ml-12 ml-4 cursor-pointer ${textGradientColor}`}
+        onClick={() => {
+          const element = document.getElementById("frontPage");
+          element.scrollIntoView({
+            behavior: "smooth",
+          });
+        }}
+      >
         Parth Chheda
       </h1>
       <ul className="hidden md:flex mr-10">
@@ -61,18 +69,57 @@ function Navbar({ textGradientColor }) {
             : `fixed left-[-100%] ease-in-out duration-500 h-full top-0 bg-neutral-900`
         }
       >
-        <h1 className={`text-3xl font-bold m-4 ${textGradientColor}`}>
+        <h1
+          className={`text-3xl font-bold m-4 ${textGradientColor} cursor-pointer`}
+          onClick={() => {
+            const element = document.getElementById("frontPage");
+            element.scrollIntoView({
+              behavior: "smooth",
+            });
+            setNav(false);
+          }}
+        >
           Parth Chheda
         </h1>
         <ul className="p-8 text-2xl">
           <li className="p-2">
-            <a href="#about">About</a>
+            <button
+              onClick={() => {
+                const element = document.getElementById("about");
+                element.scrollIntoView({
+                  behavior: "smooth",
+                });
+                setNav(false);
+              }}
+            >
+              About
+            </button>
           </li>
           <li className="p-2">
-            <a href="#projects">Projects</a>
+            <button
+              onClick={() => {
+                const element = document.getElementById("projects");
+                element.scrollIntoView({
+                  behavior: "smooth",
+                });
+                setNav(false);
+              }}
+            >
+              Projects
+            </button>
           </li>
           <li className="p-2">
-            <a href="#projects">Contact</a>
+            <button
+              onClick={() => {
+                const element = document.getElementById("contact");
+                element.scrollIntoView({
+                  behavior: "smooth",
+                });
+                setNav(false);
+              }}
+            >
+              Contact
+            </button>
           </li>
         </ul>
       </div>

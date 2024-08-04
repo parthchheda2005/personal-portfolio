@@ -44,7 +44,7 @@ function FrontPage({ textGradientColor }) {
                 behavior: "smooth",
               });
             }}
-            className="mr-4 px-6 py-3 w-full rounded border border-gray-100 hover:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-sm sm:text-lg"
+            className="cursor-pointer mr-4 px-6 py-3 w-full rounded border border-gray-100 hover:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-sm sm:text-lg"
           >
             Contact Me
           </a>

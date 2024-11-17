@@ -43,11 +43,6 @@ function Projects({ textGradientColor }) {
 
     // For a row with 1 item, start at column 2
     if (itemsInLastRow === 1) return "sm:col-start-2";
-    // For a row with 2 items, start the first item at column 1 and second at column 3
-    if (itemsInLastRow === 2) {
-      const isFirstInLastRow = index === totalItems - 2;
-      return isFirstInLastRow ? "sm:col-start-1" : "sm:col-start-3";
-    }
     return "";
   };
 

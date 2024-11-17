@@ -2,7 +2,7 @@ import courseTracker from "../assets/course-tracker.png";
 import fplHelper from "../assets/fpl-helper.png";
 import heartDiseasePredictor from "../assets/heart-disease-predictor.png";
 import movieWebapp from "../assets/movie-webapp.png";
-import { FaGithubSquare } from "react-icons/fa";
+import ProjectBar from "./ProjectBar";
 
 function Projects({ textGradientColor }) {
   const images = [
@@ -34,6 +34,23 @@ function Projects({ textGradientColor }) {
     },
   ];
 
+  const getColumnStart = (index, totalItems) => {
+    const itemsInLastRow = totalItems % 3;
+    if (itemsInLastRow === 0) return "";
+
+    const isInLastRow = index >= totalItems - itemsInLastRow;
+    if (!isInLastRow) return "";
+
+    // For a row with 1 item, start at column 2
+    if (itemsInLastRow === 1) return "sm:col-start-2";
+    // For a row with 2 items, start the first item at column 1 and second at column 3
+    if (itemsInLastRow === 2) {
+      const isFirstInLastRow = index === totalItems - 2;
+      return isFirstInLastRow ? "sm:col-start-1" : "sm:col-start-3";
+    }
+    return "";
+  };
+
   return (
     <div id="projects" className="text-white max-width-[1200px] mx-auto">
       <div className="mx-6 my-3 text-center">
@@ -44,36 +61,13 @@ function Projects({ textGradientColor }) {
         </h1>
       </div>
 
-      <div className="on-load grid sm:grid-cols-2 gap-4 mx-7 items-center">
-        {images.map((el) => (
-          <div className="transform transition-all duration-300 hover:scale-105 overflow-hidden shadow-lg shadow-neutral-900 group container rounded-md flex justify-center items-center max-h-[400px] bg-cover relative">
-            <img src={el.img} alt="movie webapp" />
-            <div className="opacity-0 group-hover:opacity-90 bg-neutral-600 absolute inset-0 flex flex-col justify-center items-center">
-              <h1 className="lg:text-2xl font-extrabold text-xl mt-2 lg:mt-0">
-                {el.title}
-              </h1>
-              <h1 className="lg:text-xl font-extralight text-sm">{el.stack}</h1>
-              <div className="flex flex-row justify-center items-center">
-                <div className="pt-8 text-center">
-                  <button
-                    onClick={() => window.open(el.repo, "_blank").focus()}
-                    className="text-center m-2 font-bold text-lg hover:scale-125 transition duration-300"
-                  >
-                    <FaGithubSquare size={80} />
-                  </button>
-                </div>
-                {el?.live && (
-                  <div className="pt-8 text-center">
-                    <button
-                      onClick={() => window.open(el.live, "_blank").focus()}
-                      className="text-center m-2 py-3 px-4 rounded-lg font-bold text-black bg-neutral-50 text-lg hover:scale-125 transition duration-300"
-                    >
-                      Live
-                    </button>
-                  </div>
-                )}
-              </div>
-            </div>
+      <div className="on-load grid sm:grid-cols-3 gap-4 mx-7">
+        {images.map((el, index) => (
+          <div
+            key={el.title}
+            className={`${getColumnStart(index, images.length)}`}
+          >
+            <ProjectBar el={el} />
           </div>
         ))}
       </div>

@@ -5,7 +5,7 @@ function FrontPage({ textGradientColor }) {
   return (
     <div
       id="frontPage"
-      className="flex justify-center items-center sm:grid-cols-3 mx-auto bg-black text-white h-[70vh] py-8"
+      className="flex justify-center items-center sm:grid-cols-3 mx-auto bg-black text-white h-[70vh] py-3"
     >
       <div className="zoom-in px-5 my-auto text-center">
         <h1 className="text-white text-6xl lg:text-8xl font-extrabold">
@@ -29,7 +29,7 @@ function FrontPage({ textGradientColor }) {
           My name is Parth Chheda and I am a student at the University of
           British Columbia.
         </p>
-        <div className="my-8">
+        <div className="my-3">
           <a
             href={pdf}
             className="px-6 py-3 w-full rounded border border-gray-100 hover:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mr-4 text-sm sm:text-lg"

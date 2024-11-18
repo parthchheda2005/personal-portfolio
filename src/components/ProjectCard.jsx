@@ -21,7 +21,7 @@ function ProjectCard({ el }) {
             <div className="pt-8 text-center">
               <button
                 onClick={() => window.open(el.repo, "_blank").focus()}
-                className="text-center m-2 font-bold text-lg hover:-translate-y-5 transition-transform duration-300"
+                className="text-center m-2 font-bold text-lg hover:-translate-y-3 transition-transform duration-300"
               >
                 <FaGithub size={60} />
               </button>
@@ -30,7 +30,7 @@ function ProjectCard({ el }) {
               <div className="pt-8 text-center">
                 <button
                   onClick={() => window.open(el.live, "_blank").focus()}
-                  className="text-center m-2 font-bold text-lg hover:-translate-y-5 transition-transform duration-300"
+                  className="text-center m-2 font-bold text-lg hover:-translate-y-3 transition-transform duration-300"
                 >
                   <GoLinkExternal size={60} />
                 </button>

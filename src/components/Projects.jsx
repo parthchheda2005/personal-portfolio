@@ -38,18 +38,6 @@ function Projects({ textGradientColor }) {
     },
   ];
 
-  const getColumnStart = (index, totalItems) => {
-    const itemsInLastRow = totalItems % 3;
-    if (itemsInLastRow === 0) return "";
-
-    const isInLastRow = index >= totalItems - itemsInLastRow;
-    if (!isInLastRow) return "";
-
-    // For a row with 1 item, start at column 2
-    if (itemsInLastRow === 1) return "sm:col-start-2";
-    return "";
-  };
-
   return (
     <div id="projects" className="text-white max-width-[1200px] mx-auto">
       <div className="mx-6 my-3 text-center">
@@ -62,10 +50,7 @@ function Projects({ textGradientColor }) {
 
       <div className="on-load grid sm:grid-cols-3 gap-4 mx-7">
         {images.map((el, index) => (
-          <div
-            key={el.title}
-            className={`${getColumnStart(index, images.length)}`}
-          >
+          <div key={el.title}>
             <ProjectCard el={el} />
           </div>
         ))}

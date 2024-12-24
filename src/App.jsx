@@ -4,7 +4,6 @@ import FrontPage from "./components/FrontPage";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import { useEffect, useRef } from "react";
 
 function App() {
   const textGradientColor =

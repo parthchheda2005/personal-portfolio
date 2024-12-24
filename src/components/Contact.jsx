@@ -5,7 +5,7 @@ function Contact({ textGradientColor, ref }) {
   return (
     <div
       ref={ref}
-      className="on-load max-w-[1200px] mx-auto bg-black sm:py-20 p-5 mt-7"
+      className="on-load max-w-[1200px] mx-auto bg-black sm:py-20 p-5 mt-7 reveal"
       id="contact"
     >
       <div className="text-center">

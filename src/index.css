@@ -6,6 +6,35 @@ body {
   background-color: black;
 }
 
+@keyframes appear {
+  from {
+    scale: 0.5;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.reveal {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.reveal-quick {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 25%;
+}
+
+.reveal-early {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 70%;
+}
+
 @keyframes zoomIn {
   0% {
     transform: scale(0);

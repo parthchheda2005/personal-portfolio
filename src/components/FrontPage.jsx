@@ -5,9 +5,9 @@ function FrontPage({ textGradientColor }) {
   return (
     <div
       id="frontPage"
-      className="flex justify-center items-center sm:grid-cols-3 mx-auto bg-black text-white h-[70vh] py-3 reveal"
+      className="flex justify-center items-center sm:grid-cols-3 mx-auto bg-black text-white h-[70vh] py-3"
     >
-      <div className="zoom-in px-5 my-auto text-center">
+      <div className="px-5 my-auto text-center zoom-in">
         <h1 className="text-white text-6xl lg:text-8xl font-extrabold">
           <span className={textGradientColor}>I'm a </span>
           <br />

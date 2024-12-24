@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import css from "../assets/css.png";
 import javascrpit from "../assets/javascript.png";
 import java from "../assets/java.png";
@@ -10,10 +11,25 @@ import cpp from "../assets/cpp.png";
 import ts from "../assets/ts.png";
 import expressjs from "../assets/expressjs.png";
 
-function Skills({}) {
+function Skills() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  // Hide the element for 0.5 seconds when the component mounts
+  useEffect(() => {
+    setIsVisible(false);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500); // 500ms = 0.5 seconds
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
+
   return (
-    <div className="overflow-hidden bg-black text-gray-400 max-w-[1250px] mx-auto flex gap-6">
-      <div className="md:animate-loop-scroll md:flex items-center space-x-8 mx-auto grid grid-cols-3 ">
+    <div
+      className={`overflow-hidden bg-black text-gray-400 max-w-[1250px] mx-auto flex gap-6 zoom-in-slow ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      <div className="md:animate-loop-scroll md:flex items-center space-x-8 mx-auto grid grid-cols-3">
         <h2 className="text-gray-700 text-2xl md:text-4xl font-bold m-4 gap-2">
           My <br /> Tech <br /> Stack
         </h2>

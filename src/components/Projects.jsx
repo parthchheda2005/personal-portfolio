@@ -1,8 +1,10 @@
+import { useRef } from "react";
 import courseTracker from "../assets/course-tracker.png";
 import fplHelper from "../assets/fpl-helper.png";
 import heartDiseasePredictor from "../assets/heart-disease-predictor.png";
 import movieWebapp from "../assets/movie-webapp.png";
 import ProjectCard from "./ProjectCard";
+import { motion, useInView } from "framer-motion";
 
 function Projects({ textGradientColor }) {
   const images = [
@@ -38,11 +40,16 @@ function Projects({ textGradientColor }) {
     },
   ];
 
+  const cardVariants = {
+    initial: { y: 150, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
+  const ref = useRef();
+  const isInView = useInView(ref, { once: false });
+
   return (
-    <div
-      id="projects"
-      className="text-white max-width-[1200px] mx-auto reveal-quick"
-    >
+    <div id="projects" className="text-white max-width-[1200px] mx-auto">
       <div className="mx-6 my-3 text-center">
         <h1
           className={`${textGradientColor} text-4xl font-extrabold sm:text-6xl mb-6`}
@@ -51,13 +58,19 @@ function Projects({ textGradientColor }) {
         </h1>
       </div>
 
-      <div className="on-load grid sm:grid-cols-3 gap-4 mx-7">
+      <ul ref={ref} className="on-load grid sm:grid-cols-3 gap-4 mx-7">
         {images.map((el, index) => (
-          <div key={el.title}>
+          <motion.li
+            key={el.title}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 2, delay: index * 0.5 }}
+          >
             <ProjectCard el={el} />
-          </div>
+          </motion.li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

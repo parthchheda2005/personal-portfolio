@@ -79,7 +79,7 @@ function Skills() {
         </div>
       </div>
       <div
-        className="lg:animate-loop-scroll items-center space-x-8 hidden lg:flex"
+        className="sm:animate-loop-scroll items-center space-x-8 hidden lg:flex"
         aria-hidden="true"
       >
         <h2 className="text-gray-700 text-2xl md:text-4xl font-bold m-4">

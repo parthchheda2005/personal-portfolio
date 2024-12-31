@@ -4,6 +4,7 @@ import fplHelper from "../assets/fpl-helper.png";
 import heartDiseasePredictor from "../assets/heart-disease-predictor.png";
 import movieWebapp from "../assets/movie-webapp.png";
 import ProjectCard from "./ProjectCard";
+import electivefinderimg from "../assets/electivefinderimg.png";
 import { motion, useInView } from "framer-motion";
 
 function Projects({ textGradientColor }) {
@@ -15,6 +16,14 @@ function Projects({ textGradientColor }) {
       title: "FPL Helper",
       stack: "React, MongoDB, Node.js, Express.js, TailwindCSS",
       desc: "Fantasy Premier League companion website to compare player statisitcs and provide recommendations on future transfers. Data collected via web scraping the official FPL page and FBREF, and updated biweekly.",
+    },
+    {
+      img: electivefinderimg,
+      repo: "https://github.com/parthchheda2005/elective-finder",
+      live: "https://elective-finder.vercel.app/",
+      title: "Elective Finder",
+      stack: "React, FastAPI, TypeScript, Python, MongoDB TailwindCSS",
+      desc: "Web application to help students find electives. Can perform CRUD operations on course and make accounts which use JWT Authentication, and connects to Gemini 1.5 Flash to provide recommendations on courses.",
     },
     {
       img: movieWebapp,
